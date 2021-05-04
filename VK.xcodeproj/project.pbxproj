@@ -13,6 +13,10 @@
 		B65DC0CB26380BA600C412F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B65DC0CA26380BA600C412F1 /* Assets.xcassets */; };
 		B65DC0CE26380BA600C412F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B65DC0CC26380BA600C412F1 /* LaunchScreen.storyboard */; };
 		B65DC0D826380D1800C412F1 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0D726380D1800C412F1 /* LoginFormController.swift */; };
+		B65DC0E02641651700C412F1 /* MyGroupsTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0DF2641651700C412F1 /* MyGroupsTableTableViewController.swift */; };
+		B65DC0E42641654900C412F1 /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */; };
+		B65DC0E72641657E00C412F1 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */; };
+		B65DC0EA2641659E00C412F1 /* AllGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		B65DC0CD26380BA600C412F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B65DC0CF26380BA600C412F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B65DC0D726380D1800C412F1 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		B65DC0DF2641651700C412F1 /* MyGroupsTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableTableViewController.swift; sourceTree = "<group>"; };
+		B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewController.swift; sourceTree = "<group>"; };
+		B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,7 @@
 		B65DC0C026380BA400C412F1 /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				B65DC0DE2641648D00C412F1 /* Model */,
 				B65DC0C126380BA400C412F1 /* AppDelegate.swift */,
 				B65DC0C326380BA400C412F1 /* SceneDelegate.swift */,
 				B65DC0C726380BA400C412F1 /* Main.storyboard */,
@@ -65,6 +74,17 @@
 				B65DC0D726380D1800C412F1 /* LoginFormController.swift */,
 			);
 			path = VK;
+			sourceTree = "<group>";
+		};
+		B65DC0DE2641648D00C412F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B65DC0DF2641651700C412F1 /* MyGroupsTableTableViewController.swift */,
+				B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */,
+				B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */,
+				B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,7 +159,11 @@
 			files = (
 				B65DC0D826380D1800C412F1 /* LoginFormController.swift in Sources */,
 				B65DC0C226380BA400C412F1 /* AppDelegate.swift in Sources */,
+				B65DC0E42641654900C412F1 /* AllGroupsTableViewController.swift in Sources */,
+				B65DC0E02641651700C412F1 /* MyGroupsTableTableViewController.swift in Sources */,
 				B65DC0C426380BA400C412F1 /* SceneDelegate.swift in Sources */,
+				B65DC0E72641657E00C412F1 /* MyGroupsTableViewCell.swift in Sources */,
+				B65DC0EA2641659E00C412F1 /* AllGroupsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
