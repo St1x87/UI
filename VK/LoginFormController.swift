@@ -56,12 +56,35 @@ class LoginFormController: UIViewController {
         scrollView?.contentInset = contentInsets
     }
     
-    @IBAction func login(_ sender: Any) {
-        if loginTextField.text == "admin" && passwordTextField.text == "qwerty" {
-            print("Login success")
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        guard identifier == "LoginSegue" else {
+            return false
+        }
+        let checkLogIn = chechUserData()
+        
+        if !checkLogIn {
+            showLoginError()
+        }
+        
+        return checkLogIn
+        
+    }
+    
+    func chechUserData() -> Bool {
+        let login = loginTextField.text
+        let password = passwordTextField.text
+        if login == "1" && password == "1" {
+            return true
         }else {
-            print("Login error")
+            return false
         }
     }
-
+    
+    func showLoginError() {
+        let alert = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
