@@ -17,6 +17,10 @@
 		B65DC0E42641654900C412F1 /* AllGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */; };
 		B65DC0E72641657E00C412F1 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */; };
 		B65DC0EA2641659E00C412F1 /* AllGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */; };
+		B6767804264187F700B7ADFE /* MyFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6767803264187F600B7ADFE /* MyFriendsTableViewController.swift */; };
+		B67678062641881C00B7ADFE /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */; };
+		B676780826418B4900B7ADFE /* FriendImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */; };
+		B676780A26418B9700B7ADFE /* FriendImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewController.swift; sourceTree = "<group>"; };
 		B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		B6767803264187F600B7ADFE /* MyFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewController.swift; sourceTree = "<group>"; };
+		B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
+		B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendImageCollectionViewController.swift; sourceTree = "<group>"; };
+		B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendImageCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,10 @@
 				B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */,
 				B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */,
 				B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */,
+				B6767803264187F600B7ADFE /* MyFriendsTableViewController.swift */,
+				B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */,
+				B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */,
+				B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,11 +169,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B676780A26418B9700B7ADFE /* FriendImageCollectionViewCell.swift in Sources */,
 				B65DC0D826380D1800C412F1 /* LoginFormController.swift in Sources */,
+				B6767804264187F700B7ADFE /* MyFriendsTableViewController.swift in Sources */,
 				B65DC0C226380BA400C412F1 /* AppDelegate.swift in Sources */,
 				B65DC0E42641654900C412F1 /* AllGroupsTableViewController.swift in Sources */,
 				B65DC0E02641651700C412F1 /* MyGroupsTableViewController.swift in Sources */,
 				B65DC0C426380BA400C412F1 /* SceneDelegate.swift in Sources */,
+				B676780826418B4900B7ADFE /* FriendImageCollectionViewController.swift in Sources */,
+				B67678062641881C00B7ADFE /* MyFriendsTableViewCell.swift in Sources */,
 				B65DC0E72641657E00C412F1 /* MyGroupsTableViewCell.swift in Sources */,
 				B65DC0EA2641659E00C412F1 /* AllGroupsTableViewCell.swift in Sources */,
 			);
