@@ -7,8 +7,10 @@
 
 import UIKit
 
-class MyGroupsTableTableViewController: UITableViewController {
+class MyGroupsTableViewController: UITableViewController {
 
+    var myGroups = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,23 +25,41 @@ class MyGroupsTableTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return myGroups.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupCell", for: indexPath) as! MyGroupsTableViewCell
 
-        // Configure the cell...
+        let myGroup = myGroups[indexPath.row]
+        
+        cell.myGroupName.text = myGroup
 
         return cell
     }
-    */
+    
+    @IBAction func addGroup(segue: UIStoryboardSegue){
+        
+        if segue.identifier == "addGroup" {
+            let allGroupController = segue.source as! AllGroupsTableViewController
+            
+            if let indexPath = allGroupController.tableView.indexPathForSelectedRow {
+                let group = allGroupController.groups[indexPath.row]
+                if !myGroups.contains(group){
+                    myGroups.append(group)
+                    tableView.reloadData()
+                }
+            }
+        }
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -49,17 +69,18 @@ class MyGroupsTableTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
+        } //else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        //}
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
