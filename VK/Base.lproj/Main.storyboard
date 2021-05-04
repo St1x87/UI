@@ -136,7 +136,7 @@
             </objects>
             <point key="canvasLocation" x="2766.666666666667" y="93.75"/>
         </scene>
-        <!--Groups-->
+        <!--My Groups-->
         <scene sceneID="cDx-vk-vq7">
             <objects>
                 <tableViewController id="fVI-xR-vKV" sceneMemberID="viewController">
@@ -159,7 +159,7 @@
                             <outlet property="delegate" destination="fVI-xR-vKV" id="4ee-rK-Y1j"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Groups" id="PkG-tB-m1B">
+                    <navigationItem key="navigationItem" title="My Groups" id="PkG-tB-m1B">
                         <barButtonItem key="rightBarButtonItem" title="Add Group" id="D3k-m8-AES">
                             <connections>
                                 <segue destination="NjM-fR-6VT" kind="show" id="EQM-W6-LHt"/>
@@ -171,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="4632" y="522"/>
         </scene>
-        <!--Table View Controller-->
+        <!--All Groups-->
         <scene sceneID="vWB-NR-A0Y">
             <objects>
                 <tableViewController id="NjM-fR-6VT" sceneMemberID="viewController">
@@ -194,13 +194,13 @@
                             <outlet property="delegate" destination="NjM-fR-6VT" id="mhj-hh-zlc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="tMM-g6-Jke"/>
+                    <navigationItem key="navigationItem" title="All Groups" id="tMM-g6-Jke"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JvG-4K-SZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5454" y="522"/>
         </scene>
-        <!--Friends-->
+        <!--My Friends-->
         <scene sceneID="bmz-W3-zh0">
             <objects>
                 <tableViewController id="6kR-RI-wW7" sceneMemberID="viewController">
@@ -226,7 +226,7 @@
                             <outlet property="delegate" destination="6kR-RI-wW7" id="w7i-OS-gfK"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Friends" id="plL-cw-fJK"/>
+                    <navigationItem key="navigationItem" title="My Friends" id="plL-cw-fJK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="58c-wE-QgR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
