@@ -11,7 +11,7 @@ class LoginFormController: UIViewController {
     
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var loginTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!    
     
     override func viewDidLoad() {
         super.viewDidLoad()
