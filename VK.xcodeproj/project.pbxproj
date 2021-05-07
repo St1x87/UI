@@ -21,6 +21,8 @@
 		B67678062641881C00B7ADFE /* MyFriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */; };
 		B676780826418B4900B7ADFE /* FriendImageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */; };
 		B676780A26418B9700B7ADFE /* FriendImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */; };
+		B67678122645944100B7ADFE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678112645944100B7ADFE /* Friend.swift */; };
+		B67678142645945000B7ADFE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678132645945000B7ADFE /* Group.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFriendsTableViewCell.swift; sourceTree = "<group>"; };
 		B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendImageCollectionViewController.swift; sourceTree = "<group>"; };
 		B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B67678112645944100B7ADFE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		B67678132645945000B7ADFE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 		B65DC0C026380BA400C412F1 /* VK */ = {
 			isa = PBXGroup;
 			children = (
+				B676780E264593FC00B7ADFE /* Groups */,
+				B676780B2645939B00B7ADFE /* Friends */,
 				B65DC0DE2641648D00C412F1 /* Model */,
 				B65DC0C126380BA400C412F1 /* AppDelegate.swift */,
 				B65DC0C326380BA400C412F1 /* SceneDelegate.swift */,
@@ -87,16 +93,64 @@
 		B65DC0DE2641648D00C412F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B65DC0DF2641651700C412F1 /* MyGroupsTableViewController.swift */,
-				B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */,
-				B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */,
-				B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */,
-				B6767803264187F600B7ADFE /* MyFriendsTableViewController.swift */,
-				B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */,
-				B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */,
-				B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */,
+				B67678112645944100B7ADFE /* Friend.swift */,
+				B67678132645945000B7ADFE /* Group.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B676780B2645939B00B7ADFE /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				B676780D264593E100B7ADFE /* Cells */,
+				B676780C264593B200B7ADFE /* Controllers */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		B676780C264593B200B7ADFE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B676780726418B4900B7ADFE /* FriendImageCollectionViewController.swift */,
+				B6767803264187F600B7ADFE /* MyFriendsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B676780D264593E100B7ADFE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B67678052641881C00B7ADFE /* MyFriendsTableViewCell.swift */,
+				B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B676780E264593FC00B7ADFE /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				B67678102645941A00B7ADFE /* Cells */,
+				B676780F2645940700B7ADFE /* Controllers */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		B676780F2645940700B7ADFE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B65DC0DF2641651700C412F1 /* MyGroupsTableViewController.swift */,
+				B65DC0E32641654900C412F1 /* AllGroupsTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B67678102645941A00B7ADFE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B65DC0E62641657E00C412F1 /* MyGroupsTableViewCell.swift */,
+				B65DC0E92641659E00C412F1 /* AllGroupsTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,8 +226,10 @@
 				B676780A26418B9700B7ADFE /* FriendImageCollectionViewCell.swift in Sources */,
 				B65DC0D826380D1800C412F1 /* LoginFormController.swift in Sources */,
 				B6767804264187F700B7ADFE /* MyFriendsTableViewController.swift in Sources */,
+				B67678122645944100B7ADFE /* Friend.swift in Sources */,
 				B65DC0C226380BA400C412F1 /* AppDelegate.swift in Sources */,
 				B65DC0E42641654900C412F1 /* AllGroupsTableViewController.swift in Sources */,
+				B67678142645945000B7ADFE /* Group.swift in Sources */,
 				B65DC0E02641651700C412F1 /* MyGroupsTableViewController.swift in Sources */,
 				B65DC0C426380BA400C412F1 /* SceneDelegate.swift in Sources */,
 				B676780826418B4900B7ADFE /* FriendImageCollectionViewController.swift in Sources */,
