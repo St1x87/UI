@@ -9,12 +9,7 @@ import UIKit
 
 class MyFriendsTableViewController: UITableViewController {
 
-    var myFriends = [
-        "Иванов Иван",
-        "Петров Петр",
-        "Васильев Константин",
-        "Лукошко Дарья"
-    ]
+    var myFriends = Friend.friends
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,11 +39,16 @@ class MyFriendsTableViewController: UITableViewController {
 
         let friend = myFriends[indexPath.row]
         
-        cell.myFriendName.text = friend
+        cell.configure(friend)
 
         return cell
     }
     
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if identifier == "ImageFriendSegue"{
+                
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -85,14 +85,22 @@ class MyFriendsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard
+            segue.identifier == "ImageFriendSegue",
+            let destinationController = segue.destination as? FriendImageCollectionViewController,
+            let index = tableView.indexPathForSelectedRow?.row
+        else {
+            return
+        }
+        
+        destinationController.imagesFriend = myFriends[index].images
+        destinationController.title = myFriends[index].name
     }
-    */
+    
 
 }

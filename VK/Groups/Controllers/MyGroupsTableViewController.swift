@@ -9,7 +9,7 @@ import UIKit
 
 class MyGroupsTableViewController: UITableViewController {
 
-    var myGroups = [String]()
+    var myGroups = [Group]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class MyGroupsTableViewController: UITableViewController {
 
         let myGroup = myGroups[indexPath.row]
         
-        cell.myGroupName.text = myGroup
+        cell.configure(myGroup)
 
         return cell
     }
@@ -50,9 +50,11 @@ class MyGroupsTableViewController: UITableViewController {
             let allGroupController = segue.source as! AllGroupsTableViewController
             
             if let indexPath = allGroupController.tableView.indexPathForSelectedRow {
-                let group = allGroupController.groups[indexPath.row]
-                if !myGroups.contains(group){
-                    myGroups.append(group)
+                let newGroup = allGroupController.groups[indexPath.row]
+                if !myGroups.contains(where: { (group) -> Bool in
+                    group.name == newGroup.name
+                }) {
+                    myGroups.append(newGroup)
                     tableView.reloadData()
                 }
             }

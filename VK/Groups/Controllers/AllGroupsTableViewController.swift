@@ -9,12 +9,7 @@ import UIKit
 
 class AllGroupsTableViewController: UITableViewController {
 
-    var groups = [
-        "Music",
-        "Cars",
-        "Sport",
-        "Travels"
-    ]
+    var groups = Group.groups
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +39,7 @@ class AllGroupsTableViewController: UITableViewController {
 
         let group = groups[indexPath.row]
         
-        cell.groupName.text = group
+        cell.configure(group)
 
         return cell
     }

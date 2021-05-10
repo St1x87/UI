@@ -73,7 +73,7 @@ class LoginFormController: UIViewController {
     func chechUserData() -> Bool {
         let login = loginTextField.text
         let password = passwordTextField.text
-        if login == "1" && password == "1" {
+        if login == "" && password == "" {
             return true
         }else {
             return false

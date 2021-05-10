@@ -22,5 +22,15 @@ class AllGroupsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    override func prepareForReuse() {
+        groupName.text = ""
+        groupImage.image = UIImage(named: "placeholder")
+    }
+    
+    func configure(_ group: Group){
+        self.groupName.text = group.name
+        self.groupImage.image = group.icon
+    }
 
 }
