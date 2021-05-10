@@ -23,6 +23,7 @@
 		B676780A26418B9700B7ADFE /* FriendImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */; };
 		B67678122645944100B7ADFE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678112645944100B7ADFE /* Friend.swift */; };
 		B67678142645945000B7ADFE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678132645945000B7ADFE /* Group.swift */; };
+		B67678162649B3B800B7ADFE /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678152649B3B800B7ADFE /* LikeControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B676780926418B9700B7ADFE /* FriendImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		B67678112645944100B7ADFE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		B67678132645945000B7ADFE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		B67678152649B3B800B7ADFE /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			children = (
 				B67678112645944100B7ADFE /* Friend.swift */,
 				B67678132645945000B7ADFE /* Group.swift */,
+				B67678152649B3B800B7ADFE /* LikeControl.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 			files = (
 				B676780A26418B9700B7ADFE /* FriendImageCollectionViewCell.swift in Sources */,
 				B65DC0D826380D1800C412F1 /* LoginFormController.swift in Sources */,
+				B67678162649B3B800B7ADFE /* LikeControl.swift in Sources */,
 				B6767804264187F700B7ADFE /* MyFriendsTableViewController.swift in Sources */,
 				B67678122645944100B7ADFE /* Friend.swift in Sources */,
 				B65DC0C226380BA400C412F1 /* AppDelegate.swift in Sources */,
