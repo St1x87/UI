@@ -1,5 +1,5 @@
 //
-//  MyGroupsTableTableViewController.swift
+//  MyFriendsTableViewController.swift
 //  VK
 //
 //  Created by Андрей Пашков on 04.05.2021.
@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MyGroupsTableViewController: UITableViewController {
+class MyFriendsTableViewController: UITableViewController {
 
-    var myGroups = [String]()
+    var myFriends = Friend.friends
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,36 +30,25 @@ class MyGroupsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return myGroups.count
+        return myFriends.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupCell", for: indexPath) as! MyGroupsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myFriendCell", for: indexPath) as! MyFriendsTableViewCell
 
-        let myGroup = myGroups[indexPath.row]
+        let friend = myFriends[indexPath.row]
         
-        cell.myGroupName.text = myGroup
+        cell.configure(friend)
 
         return cell
     }
     
-    @IBAction func addGroup(segue: UIStoryboardSegue){
-        
-        if segue.identifier == "addGroup" {
-            let allGroupController = segue.source as! AllGroupsTableViewController
-            
-            if let indexPath = allGroupController.tableView.indexPathForSelectedRow {
-                let group = allGroupController.groups[indexPath.row]
-                if !myGroups.contains(group){
-                    myGroups.append(group)
-                    tableView.reloadData()
-                }
-            }
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if identifier == "ImageFriendSegue"{
+                
         }
-        
     }
-    
 
     /*
     // Override to support conditional editing of the table view.
@@ -69,18 +58,17 @@ class MyGroupsTableViewController: UITableViewController {
     }
     */
 
-    
+    /*
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
-            myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } //else if editingStyle == .insert {
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        //}
+        }    
     }
-    
+    */
 
     /*
     // Override to support rearranging the table view.
@@ -97,14 +85,22 @@ class MyGroupsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard
+            segue.identifier == "ImageFriendSegue",
+            let destinationController = segue.destination as? FriendImageCollectionViewController,
+            let index = tableView.indexPathForSelectedRow?.row
+        else {
+            return
+        }
+        
+        destinationController.imagesFriend = myFriends[index].images
+        destinationController.title = myFriends[index].name
     }
-    */
+    
 
 }

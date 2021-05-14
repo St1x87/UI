@@ -9,6 +9,8 @@ import UIKit
 
 class FriendImageCollectionViewController: UICollectionViewController {
 
+    var imagesFriend = [UIImage?]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,13 +43,13 @@ class FriendImageCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 1
+        return imagesFriend.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendImageCell", for: indexPath) as! FriendImageCollectionViewCell
     
-        // Configure the cell
+        cell.friendImage.image = imagesFriend[indexPath.row]
     
         return cell
     }

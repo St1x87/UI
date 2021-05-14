@@ -1,5 +1,5 @@
 //
-//  MyFriendsTableViewController.swift
+//  MyGroupsTableTableViewController.swift
 //  VK
 //
 //  Created by Андрей Пашков on 04.05.2021.
@@ -7,14 +7,9 @@
 
 import UIKit
 
-class MyFriendsTableViewController: UITableViewController {
+class MyGroupsTableViewController: UITableViewController {
 
-    var myFriends = [
-        "Иванов Иван",
-        "Петров Петр",
-        "Васильев Константин",
-        "Лукошко Дарья"
-    ]
+    var myGroups = [Group]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +30,36 @@ class MyFriendsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return myFriends.count
+        return myGroups.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myFriendCell", for: indexPath) as! MyFriendsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupCell", for: indexPath) as! MyGroupsTableViewCell
 
-        let friend = myFriends[indexPath.row]
+        let myGroup = myGroups[indexPath.row]
         
-        cell.myFriendName.text = friend
+        cell.configure(myGroup)
 
         return cell
+    }
+    
+    @IBAction func addGroup(segue: UIStoryboardSegue){
+        
+        if segue.identifier == "addGroup" {
+            let allGroupController = segue.source as! AllGroupsTableViewController
+            
+            if let indexPath = allGroupController.tableView.indexPathForSelectedRow {
+                let newGroup = allGroupController.groups[indexPath.row]
+                if !myGroups.contains(where: { (group) -> Bool in
+                    group.name == newGroup.name
+                }) {
+                    myGroups.append(newGroup)
+                    tableView.reloadData()
+                }
+            }
+        }
+        
     }
     
 
@@ -58,17 +71,18 @@ class MyFriendsTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            myGroups.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
+        } //else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        //}
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.
