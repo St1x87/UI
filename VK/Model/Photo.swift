@@ -5,4 +5,11 @@
 //  Created by Андрей Пашков on 14.05.2021.
 //
 
-import Foundation
+import UIKit
+
+struct Photo {
+    var name: String
+    var image: UIImage
+    var likeCount: Int
+    var isLike: Bool
+}
