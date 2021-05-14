@@ -24,6 +24,7 @@
 		B67678122645944100B7ADFE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678112645944100B7ADFE /* Friend.swift */; };
 		B67678142645945000B7ADFE /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678132645945000B7ADFE /* Group.swift */; };
 		B67678162649B3B800B7ADFE /* LikeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B67678152649B3B800B7ADFE /* LikeControl.swift */; };
+		B6767826264EC9C700B7ADFE /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6767825264EC9C700B7ADFE /* Photo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		B67678112645944100B7ADFE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		B67678132645945000B7ADFE /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		B67678152649B3B800B7ADFE /* LikeControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeControl.swift; sourceTree = "<group>"; };
+		B6767825264EC9C700B7ADFE /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				B67678112645944100B7ADFE /* Friend.swift */,
 				B67678132645945000B7ADFE /* Group.swift */,
 				B67678152649B3B800B7ADFE /* LikeControl.swift */,
+				B6767825264EC9C700B7ADFE /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				B65DC0E42641654900C412F1 /* AllGroupsTableViewController.swift in Sources */,
 				B67678142645945000B7ADFE /* Group.swift in Sources */,
 				B65DC0E02641651700C412F1 /* MyGroupsTableViewController.swift in Sources */,
+				B6767826264EC9C700B7ADFE /* Photo.swift in Sources */,
 				B65DC0C426380BA400C412F1 /* SceneDelegate.swift in Sources */,
 				B676780826418B4900B7ADFE /* FriendImageCollectionViewController.swift in Sources */,
 				B67678062641881C00B7ADFE /* MyFriendsTableViewCell.swift in Sources */,
